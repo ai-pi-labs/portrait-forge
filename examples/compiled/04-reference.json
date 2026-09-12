@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "source_sha256": "9d98436f82a0336146f091009385361aaf48b92563cf66f40317fb9fe42f2125",
+  "outputs": [
+    {
+      "id": "observation-demo",
+      "prompt": "妆容｜唇色：偏砖红。",
+      "trace": [
+        {
+          "field": "makeup.lip_color",
+          "section": "makeup",
+          "text": "唇色：偏砖红",
+          "status": "observed"
+        }
+      ],
+      "omitted": [
+        "makeup.lip_finish"
+      ]
+    }
+  ],
+  "kind": "observation_summary",
+  "image_generated": false
+}

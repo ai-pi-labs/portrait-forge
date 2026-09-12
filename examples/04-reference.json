@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "request": {
+    "text": "示例观察记录：仅拆解参考图的唇色；不设计新人物。",
+    "mode": "reference",
+    "deliverable": "text",
+    "image_authorized": false
+  },
+  "policy": {
+    "locks": {},
+    "same_makeup": false,
+    "distinct": false,
+    "min_groups": 3,
+    "min_core": 2
+  },
+  "cards": [
+    {
+      "id": "observation-demo",
+      "intent": "合成观察数据，非真实看图结果",
+      "fields": {
+        "makeup.lip_color": {
+          "value": "偏砖红",
+          "status": "observed",
+          "evidence": "合成测试材料：假设唇部颜色可见"
+        },
+        "makeup.lip_finish": {
+          "value": null,
+          "status": "unknown",
+          "evidence": "合成测试材料：分辨率不足"
+        }
+      },
+      "locks": {},
+      "assumptions": [
+        "此文件为合同示例，未附真实参考图"
+      ]
+    }
+  ]
+}

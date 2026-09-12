@@ -1,0 +1,121 @@
+{
+  "repository": "https://github.com/nuyoah-ai-works/nuyoah-portrait-character-designer",
+  "reviewed_commit": "99b9a2c90e5b09507c6a61b5c27b9e2740ddb63d",
+  "date": "2026-09-12",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "cf237c7aff44efbe6e502e645c3e06da03a69d7bdeb43392108ef3348143417e",
+      "bytes": 10,
+      "review": "仅忽略 .DS_Store；新版也忽略 Python 缓存和本地工作目录。"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "b5fde44b81590f0f06dd9d1af6a13a79eb322ba219c2578369f5b258fdf07e9b",
+      "bytes": 1070,
+      "review": "MIT；记录来源，并在第三方声明中保留原许可。"
+    },
+    {
+      "path": "README.md",
+      "sha256": "080201f923e0ab892583cb27fcd3885f688776ebdcb20f7139f02cbb1e7e7f72",
+      "bytes": 5371,
+      "review": "定位、安装与验证边界清晰；发行叙述和运行入口放在仓库根。新版分离工程与独立技能。"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "3985c6226a19464d15fd3f17f707753c1df8a791a38e8b66c6fe9d7141099860",
+      "bytes": 2705,
+      "review": "按任务读取规则，默认文字、显式生图；新版改为档案驱动的执行流程。"
+    },
+    {
+      "path": "agents/interface.yaml",
+      "sha256": "ecbb5539938fe40bc6b9d908d3676316b6985e698581ad6b0798a17196fa36fe",
+      "bytes": 702,
+      "review": "额外兼容/信任字段为项目自定义层；新版不把自定义清单冒充宿主执行能力。"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "c9abe95fa6d71a90dd078d97fce75bd403c501b6eb71aa5d46af9b3f6af421c7",
+      "bytes": 348,
+      "review": "官方宿主显示元数据和默认隐式调用；新版保留这种必要标准结构。"
+    },
+    {
+      "path": "evals/cases.json",
+      "sha256": "bcd50bfdf075c898ecf8acd36603eaf1b4f48c786e13599b5c40feb2b3c613d7",
+      "bytes": 8312,
+      "review": "21条自然语言人工/模型材料，原仓库明确非自动模型全部执行。新版提供24条独立设计的待执行评估。"
+    },
+    {
+      "path": "examples/real-cases.md",
+      "sha256": "78d6ed38b20a47d1131b3bb20c16ff777e7c7da749e2237dfefebf0566fee863",
+      "bytes": 10089,
+      "review": "4份真实提示词及偏差说明，未附公开原图；新版提供合成、可执行JSON示例并明确未生图。"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "089d750805494bfca1e836c98027bef3504442db16fa895c91a8314822292acb",
+      "bytes": 3465,
+      "review": "全部18条文件哈希与字节数核对；sourceCommit 与当前提交不同，属于声明的发布来源，不当作当前HEAD。"
+    },
+    {
+      "path": "references/acceptance-and-gpt.md",
+      "sha256": "242324e8df12415e9b35337648456dbdb3ff05b6edbbc716e791cb8ded3cc40c",
+      "bytes": 2768,
+      "review": "已有多层验收和源派生导出；新版不固定宣称宿主编辑器字数限制或能力配置。"
+    },
+    {
+      "path": "references/check-contract.md",
+      "sha256": "d8e53469b802f0ca73f87defa0b0470aed0c0736da9517d1770fe15af98c26c9",
+      "bytes": 3582,
+      "review": "完整说明16轴与脚本边界；同脸要求完整轴，额外锁定由自然语言核查。新版局部任务允许未知基线。"
+    },
+    {
+      "path": "references/decision-rules.md",
+      "sha256": "dae1369e547ff0c9b44bf96eb853b8e168b3f75c9abf1c4b50f7931965beca33",
+      "bytes": 6094,
+      "review": "模式与主副气质处理完整，Prompt 主要靠 Agent 手工组织。新版增加确定性编译。"
+    },
+    {
+      "path": "references/lexicon.md",
+      "sha256": "7714260ac2c5b3af635c82a1becd9afd2b3a2812f73432281e044e6b5c9c7a7e",
+      "bytes": 6853,
+      "review": "候选丰富，不把文化绑定脸型；新版以可执行字段目录与聚焦规则分工。"
+    },
+    {
+      "path": "references/makeup-adaptation.md",
+      "sha256": "8bc45d1733fa0f2eca2ddbcc4c80af9948187478964185a14ff685b2a10ad151",
+      "bytes": 3682,
+      "review": "区分原生脸与妆效，按目标适配；新版将唇色、质地、边缘拆开支持单项修改。"
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "be646857668f1350bb63be9f3cdd4b3e8bef5d9412fcbe8da71d15821739fe75",
+      "bytes": 1651,
+      "review": "列明依据和未验证事项；新版保留来源边界，不复述原会话文案。"
+    },
+    {
+      "path": "references/structure-and-compatibility.md",
+      "sha256": "f9a7f4782d8d6ef308876868635cae8d0faa22459f08fa0efd9a290cca83c682",
+      "bytes": 10924,
+      "review": "骨相三区、兼容性、六组差异及五人候选详细；部分骨相不在脚本字段中。新版覆盖骨相锁定和编译。"
+    },
+    {
+      "path": "scripts/check_design.py",
+      "sha256": "59a2fadabc949e80b51a6753f300b70cc8597c523afe2211d83645d3ef8d68ff",
+      "bytes": 6712,
+      "review": "只校验16轴和4个同妆字段，结构计数组完整，重复键防护存在；不编译Prompt，不自动验证肤色摄影锁定。"
+    },
+    {
+      "path": "scripts/export_gpt.py",
+      "sha256": "84bfe410537759548c520566b678f74ad94ebd25d78c052c77ffd78bf4cc9b42",
+      "bytes": 3062,
+      "review": "按真源合并规则、有哈希；导出配置并非线上应用，固定8000限制。新版输出通用阅读资料，不代替安装。"
+    },
+    {
+      "path": "tests/test_design.py",
+      "sha256": "d9fbf92184bbd8ee34c0538a467e2cc2e45651ff805e71ba01726624e11be08c",
+      "bytes": 5647,
+      "review": "11项程序测试实际运行全部通过，覆盖原编码合同；新版加入编译、修订、安装、CLI及派生物检查。"
+    }
+  ]
+}

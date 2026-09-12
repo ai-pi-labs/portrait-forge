@@ -1,0 +1,283 @@
+{
+  "name": "portrait-forge",
+  "version": "1.0.0",
+  "format": "project-inventory-v1",
+  "scope": "project inventory, not host plugin metadata",
+  "files": [
+    {
+      "path": ".github/workflows/check.yml",
+      "bytes": 407,
+      "sha256": "5bb2341a7570cc640810cfdba7a9709aa76844b8bb3c9d9459f6c078aab80ae6"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 35,
+      "sha256": "5c26d325138cbdfb3aa34ef2aa2c81ed350f445bfa6b231358090f40a1331c8f"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1084,
+      "sha256": "2d5f3604170b0a32f81ed718e3c8288210954c5b4bc2410c13ecccb5b88b61c2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6402,
+      "sha256": "f3c0e65179aff5f259d3cf1030cad83db6087199893e9ea23e20761bb71d974d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1559,
+      "sha256": "6a8558815c1e12ba8fcd02eac769c104e0f14bb7ce570fd7628f242196787a5a"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 1979,
+      "sha256": "e73353adde427513f08d5f4fcb3783cd9de8780dc302d8a11c168d91b984cf74"
+    },
+    {
+      "path": "docs/EXTENDING.md",
+      "bytes": 2358,
+      "sha256": "7b0b07ba1d7beaeabd1c492c94ae5756bf5b3340fbfee5b03117e7bbb77ed10d"
+    },
+    {
+      "path": "docs/HOSTS.md",
+      "bytes": 1596,
+      "sha256": "5347603904e3fbe1d105fdd99fc392139ffa1a157dd13a0f4056d96f3d9f8f29"
+    },
+    {
+      "path": "docs/UPSTREAM_REVIEW.md",
+      "bytes": 3632,
+      "sha256": "8fb634d5a94d0bdd2d4d732a7b90d02253c4547e34d1b48985baf3b31def16eb"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 1833,
+      "sha256": "150069a6d5b57d5ae8e6ab336a63dd36b57f80813199a57b8f07d2ff281b2cec"
+    },
+    {
+      "path": "docs/release-checks.json",
+      "bytes": 312,
+      "sha256": "53d6eb1bbe58b02ce9dcf85d46785895ca0d0fb18f976430b3631eaeb324982f"
+    },
+    {
+      "path": "docs/test-results.txt",
+      "bytes": 3388,
+      "sha256": "9e03a711d45d20142cd698a56353eb212d6fc272364d04e73ba695e0606d449c"
+    },
+    {
+      "path": "docs/upstream-inventory.json",
+      "bytes": 5638,
+      "sha256": "e34677c20528bbb0d8db7411bdf4b984517c8a228b317c6231b43006f6f86a87"
+    },
+    {
+      "path": "evals/README.md",
+      "bytes": 1228,
+      "sha256": "fc503dbfa9f57e29c2561a2af04e9f8a0dd7e4f028cad103ca1afad5c6908af6"
+    },
+    {
+      "path": "evals/scenarios.json",
+      "bytes": 6411,
+      "sha256": "3ab5080d47b4c89e0b7718997f59bd7fe897eb087768d2a3a53574f688bc36bf"
+    },
+    {
+      "path": "examples/01-original.json",
+      "bytes": 7841,
+      "sha256": "817076496f225de2c6c6e5005e34536b38631501379d402a7bf9ee0225498e1d"
+    },
+    {
+      "path": "examples/02-edited.json",
+      "bytes": 8293,
+      "sha256": "e23a6a94574a674a44f83568891a69bd80bef31228eff57cd4c5e21faf05e5a3"
+    },
+    {
+      "path": "examples/03-roster.json",
+      "bytes": 37053,
+      "sha256": "df65afd5c5a5a56a079f18e5828f3d19aca7da0c4fb260a2447d2a8a4e1247b7"
+    },
+    {
+      "path": "examples/04-reference.json",
+      "bytes": 933,
+      "sha256": "45895fbffa876e7a3e0dfaad486131e841bf781bc2cc0b54f72285742ad4e923"
+    },
+    {
+      "path": "examples/05-partial-baseline.json",
+      "bytes": 1043,
+      "sha256": "77b1751ba964331c29ae3ce56be7804364509d4a18bb485d812af6ff0de20d32"
+    },
+    {
+      "path": "examples/06-partial-edited.json",
+      "bytes": 1522,
+      "sha256": "65e633da3ef2c05402840a4b82288346e49b5e95879d636e4b3854ed7cad675a"
+    },
+    {
+      "path": "examples/compiled/01-original.json",
+      "bytes": 10581,
+      "sha256": "1b89acd474538e76f7c14274722f91180c517dca725c1d150c85a3851721e7f0"
+    },
+    {
+      "path": "examples/compiled/01-original.md",
+      "bytes": 1864,
+      "sha256": "005468adfa488ee9e7baab4eb992226b7191a7feb3dfe01553547ff8147b8868"
+    },
+    {
+      "path": "examples/compiled/02-edited.json",
+      "bytes": 10581,
+      "sha256": "d64384a1714f25fe18d2aa5b12f1ae01417918be56fc922d95dcdf0226a666d8"
+    },
+    {
+      "path": "examples/compiled/02-edited.md",
+      "bytes": 1864,
+      "sha256": "80eecbfaae9b13f87e97cd3a9cce1f45b772c2641ed864363f2504d387dae606"
+    },
+    {
+      "path": "examples/compiled/03-roster.json",
+      "bytes": 52221,
+      "sha256": "2cc1af13366d9b259eb6ac8b47f3cac4a0c46011c449ff42e058c74828ff4d6e"
+    },
+    {
+      "path": "examples/compiled/03-roster.md",
+      "bytes": 9342,
+      "sha256": "480ddb992542e309148b03eaf2d4b0841919d3d62d999d32cb4291c060bf1d89"
+    },
+    {
+      "path": "examples/compiled/04-reference.json",
+      "bytes": 530,
+      "sha256": "1cd89ccf5cac2453fecc5112ca5b9ce9c1901b5036f64547bd1231bad38055c2"
+    },
+    {
+      "path": "examples/compiled/04-reference.md",
+      "bytes": 52,
+      "sha256": "bf10c05c9eb835042b19c2c9cfbab9bd3c729109f8fa32ee2730e0b4307444b1"
+    },
+    {
+      "path": "examples/compiled/06-partial-edited.json",
+      "bytes": 721,
+      "sha256": "45870cd57ae2edb35ed45481e06443f9e23e6be16a329cb00e11af8dc2ab35f4"
+    },
+    {
+      "path": "examples/compiled/06-partial-edited.md",
+      "bytes": 94,
+      "sha256": "5b131a21d2db226a4dc7b17424cf9891f426da097b5435ad90525b102e749e6e"
+    },
+    {
+      "path": "examples/lip-patch.json",
+      "bytes": 121,
+      "sha256": "e4dc7232f402c95d018aa3f6110bc1d920902eba55e8329230fc8b12903daed6"
+    },
+    {
+      "path": "skill/portrait-forge/LICENSE",
+      "bytes": 1084,
+      "sha256": "2d5f3604170b0a32f81ed718e3c8288210954c5b4bc2410c13ecccb5b88b61c2"
+    },
+    {
+      "path": "skill/portrait-forge/SKILL.md",
+      "bytes": 3708,
+      "sha256": "a9ad538f54f36805ec3b1f46aeb2182add2f60a5f67ecedaceb952c9ca4a7fb5"
+    },
+    {
+      "path": "skill/portrait-forge/THIRD_PARTY_NOTICES.md",
+      "bytes": 1559,
+      "sha256": "6a8558815c1e12ba8fcd02eac769c104e0f14bb7ce570fd7628f242196787a5a"
+    },
+    {
+      "path": "skill/portrait-forge/agents/openai.yaml",
+      "bytes": 359,
+      "sha256": "93ae75fce0d720c40bed216efaffdaaa14cf9bca32c190d3e8c27f2c31658b46"
+    },
+    {
+      "path": "skill/portrait-forge/assets/fields.json",
+      "bytes": 10611,
+      "sha256": "db007f300a818abe15defa66935651613d424677ae695ee6b8b5a5cebf73be6b"
+    },
+    {
+      "path": "skill/portrait-forge/assets/plan.schema.json",
+      "bytes": 160004,
+      "sha256": "86bf653654edfb08c7c75d371e2784a12e3dcf2960881e217d3253e6087c88b0"
+    },
+    {
+      "path": "skill/portrait-forge/references/compile.md",
+      "bytes": 1854,
+      "sha256": "ee4d180aeaffad104562d9770ae03f13feb33d44a49f86b0fedafc98a552632f"
+    },
+    {
+      "path": "skill/portrait-forge/references/continuity.md",
+      "bytes": 2091,
+      "sha256": "61e351f8331af6ea2b2bc23d5bc8a447bb07a0097b8fbe7bca8d558baa43d5e3"
+    },
+    {
+      "path": "skill/portrait-forge/references/contract.md",
+      "bytes": 2130,
+      "sha256": "25cdd2f9ebfbf693c37045c9e444f402cf6bdf8c2e483ccba989dc62f92b337d"
+    },
+    {
+      "path": "skill/portrait-forge/references/design.md",
+      "bytes": 1987,
+      "sha256": "5f6a902f6090dd04a39b68910867d90f43fca0d16c20e400382ffe9a55011c90"
+    },
+    {
+      "path": "skill/portrait-forge/references/face.md",
+      "bytes": 1976,
+      "sha256": "f297812f1768c543a44841d215478f9fa9c51a637f7683453ba4e2aedfe63c56"
+    },
+    {
+      "path": "skill/portrait-forge/references/look.md",
+      "bytes": 2011,
+      "sha256": "3f59027444e60ac37326678fdbd427a91cfa94294206b6ccb407a4fa19dc340b"
+    },
+    {
+      "path": "skill/portrait-forge/references/reference.md",
+      "bytes": 1474,
+      "sha256": "dcaa170ea8872ad42a243c166abfe3a941c6b8fa204534749c6a997076bbd678"
+    },
+    {
+      "path": "skill/portrait-forge/scripts/portrait.py",
+      "bytes": 1778,
+      "sha256": "c99e4c3d555e0ab8377d5aadfb3778bc50a285c2e1197e4cc82b561e3c6157be"
+    },
+    {
+      "path": "skill/portrait-forge/scripts/portraitcore/__init__.py",
+      "bytes": 101,
+      "sha256": "0563418a3c27daa694ecb001d402e8ce3b311182c4d6acea3e360600f5aa0db8"
+    },
+    {
+      "path": "skill/portrait-forge/scripts/portraitcore/compiler.py",
+      "bytes": 1464,
+      "sha256": "bec3d2cc3850a948ceabe061e6960334eb7e7c44fa35431c7800bfa2fc363455"
+    },
+    {
+      "path": "skill/portrait-forge/scripts/portraitcore/contracts.py",
+      "bytes": 9657,
+      "sha256": "f320dc462289e922316e35a5c958c1dd2b6a271fa6ac6c4109d081815a679984"
+    },
+    {
+      "path": "skill/portrait-forge/scripts/portraitcore/revisions.py",
+      "bytes": 2483,
+      "sha256": "78b67d0235fdc5984ba666d7414cc3a520ac72d38331d188b8c6e6ad570f190a"
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "bytes": 9086,
+      "sha256": "bf1574df206b0f823711f1a2f1ffaeed60fa75d7b099f78c7029eb421fa03a19"
+    },
+    {
+      "path": "tools/export_work.py",
+      "bytes": 1700,
+      "sha256": "62956446a156bc106e8a7e4210d2893ef35769c1715adc183d139a2f48412969"
+    },
+    {
+      "path": "tools/install.py",
+      "bytes": 1067,
+      "sha256": "db02eac1aabc2dfb40c4be60af70fd67a063b555d599413e021a28fa4d18947a"
+    },
+    {
+      "path": "tools/release.py",
+      "bytes": 2067,
+      "sha256": "41512a8a1984f46dc68562029a8c9d6e2b23306fcf4ba6c30cbe014e5e4c7a98"
+    },
+    {
+      "path": "tools/schema.py",
+      "bytes": 2292,
+      "sha256": "5edf517dfb1baa2e4eba2ed3d0f0bcfaac7cb5b053347e51780b395285287093"
+    }
+  ]
+}

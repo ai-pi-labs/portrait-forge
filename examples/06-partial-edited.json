@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "request": {
+    "text": "仅改唇色，未知保持未知。",
+    "mode": "edit",
+    "deliverable": "text",
+    "image_authorized": false
+  },
+  "policy": {
+    "locks": {},
+    "same_makeup": false,
+    "distinct": false,
+    "min_groups": 3,
+    "min_core": 2
+  },
+  "cards": [
+    {
+      "id": "partial-demo",
+      "intent": "未知骨相保持未知",
+      "fields": {
+        "face.ratio": {
+          "value": "short",
+          "status": "observed",
+          "evidence": "合成测试材料：正面短宽轮廓"
+        },
+        "bone.orbit": {
+          "value": null,
+          "status": "unknown",
+          "evidence": "合成测试材料：强光无法判断"
+        },
+        "makeup.lip_color": {
+          "value": "低饱和酒红",
+          "status": "designed",
+          "evidence": "创作设定"
+        }
+      },
+      "locks": {
+        "bone.orbit": null
+      },
+      "assumptions": [
+        "合成数据，不代表真实观察"
+      ]
+    }
+  ],
+  "revision": {
+    "base_sha256": "3f6b1c80aa9c938f0fd106c8d76babd9ca03dc0592fb483ed4539b2f9caea9ff",
+    "allowed": [
+      "makeup.lip_color"
+    ],
+    "changes": {
+      "makeup.lip_color": {
+        "before": {
+          "value": "粉棕",
+          "status": "observed",
+          "evidence": "合成测试材料：唇部可见"
+        },
+        "after": {
+          "value": "低饱和酒红",
+          "status": "designed",
+          "evidence": "创作设定"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "project": {
+    "archive_crc": "PASS",
+    "extracted_execution": "PASS"
+  },
+  "skill": {
+    "archive_crc": "PASS",
+    "extracted_execution": "PASS"
+  },
+  "relative_links": "PASS",
+  "date": "2026-09-12",
+  "scope": "Archive integrity and extracted runtime only; no live model/image/host acceptance."
+}

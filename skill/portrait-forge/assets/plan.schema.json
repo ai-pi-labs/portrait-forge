@@ -1,0 +1,5370 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "mode": {
+          "enum": [
+            "create",
+            "edit",
+            "roster",
+            "reference"
+          ]
+        },
+        "deliverable": {
+          "enum": [
+            "text",
+            "image"
+          ]
+        },
+        "image_authorized": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "text",
+        "mode",
+        "deliverable",
+        "image_authorized"
+      ]
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "locks": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "person.age": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "person.presentation": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "face.ratio": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "short",
+                    "balanced",
+                    "long"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "face.midface": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "short",
+                    "balanced",
+                    "long"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "bone.brow": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "flat",
+                    "subtle",
+                    "pronounced"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "bone.orbit": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "shallow",
+                    "medium",
+                    "deep"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "bone.cheek_height": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "bone.cheek_width": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "narrow",
+                    "medium",
+                    "wide"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "bone.cheek_projection": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "flat",
+                    "subtle",
+                    "pronounced"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "bone.midface_projection": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "back",
+                    "neutral",
+                    "forward"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "jaw.width": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "narrow",
+                    "equal",
+                    "wide"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "jaw.angle": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "soft",
+                    "medium",
+                    "angular"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "chin.shape": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "round",
+                    "tapered",
+                    "square"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "chin.length": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "short",
+                    "medium",
+                    "long"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "chin.projection": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "back",
+                    "neutral",
+                    "forward"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "tissue.cheek": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "light",
+                    "medium",
+                    "full"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "eyes.length": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "short",
+                    "medium",
+                    "long"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "eyes.opening": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "small",
+                    "medium",
+                    "large"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "eyes.spacing": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "close",
+                    "medium",
+                    "wide"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "eyes.lid": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "single",
+                    "hooded",
+                    "double"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "eyes.tilt": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "down",
+                    "level",
+                    "up"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "nose.height": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "nose.width": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "narrow",
+                    "medium",
+                    "wide"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "nose.tip": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "round",
+                    "defined",
+                    "broad"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "lips.width": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "narrow",
+                    "medium",
+                    "wide"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "lips.ratio": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "lower",
+                    "balanced",
+                    "upper"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "brows.arc": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "straight",
+                    "soft",
+                    "angled"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "brows.distance": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "close",
+                    "medium",
+                    "wide"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "skin.tone": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "skin.texture": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "skin.marks": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "makeup.base": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "makeup.brows": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "makeup.shadow": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "makeup.liner": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "makeup.lashes": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "makeup.blush": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "makeup.lip_color": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "makeup.lip_finish": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "makeup.lip_edge": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "styling.hair": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "styling.wardrobe": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "styling.expression": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "styling.pose": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "photo.medium": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "photo.framing": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "photo.view": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "photo.light": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "photo.background": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": []
+        },
+        "same_makeup": {
+          "type": "boolean"
+        },
+        "distinct": {
+          "type": "boolean"
+        },
+        "min_groups": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "min_core": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        }
+      },
+      "required": [
+        "locks",
+        "same_makeup",
+        "distinct",
+        "min_groups",
+        "min_core"
+      ]
+    },
+    "cards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "intent": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "fields": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "person.age": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "person.presentation": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "face.ratio": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "short",
+                          "balanced",
+                          "long"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "short",
+                          "balanced",
+                          "long"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "face.midface": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "short",
+                          "balanced",
+                          "long"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "short",
+                          "balanced",
+                          "long"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "bone.brow": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "flat",
+                          "subtle",
+                          "pronounced"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "flat",
+                          "subtle",
+                          "pronounced"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "bone.orbit": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "shallow",
+                          "medium",
+                          "deep"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "shallow",
+                          "medium",
+                          "deep"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "bone.cheek_height": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "low",
+                          "medium",
+                          "high"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "low",
+                          "medium",
+                          "high"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "bone.cheek_width": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "narrow",
+                          "medium",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "narrow",
+                          "medium",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "bone.cheek_projection": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "flat",
+                          "subtle",
+                          "pronounced"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "flat",
+                          "subtle",
+                          "pronounced"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "bone.midface_projection": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "back",
+                          "neutral",
+                          "forward"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "back",
+                          "neutral",
+                          "forward"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "jaw.width": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "narrow",
+                          "equal",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "narrow",
+                          "equal",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "jaw.angle": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "soft",
+                          "medium",
+                          "angular"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "soft",
+                          "medium",
+                          "angular"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "chin.shape": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "round",
+                          "tapered",
+                          "square"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "round",
+                          "tapered",
+                          "square"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "chin.length": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "short",
+                          "medium",
+                          "long"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "short",
+                          "medium",
+                          "long"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "chin.projection": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "back",
+                          "neutral",
+                          "forward"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "back",
+                          "neutral",
+                          "forward"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "tissue.cheek": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "light",
+                          "medium",
+                          "full"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "light",
+                          "medium",
+                          "full"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "eyes.length": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "short",
+                          "medium",
+                          "long"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "short",
+                          "medium",
+                          "long"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "eyes.opening": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "small",
+                          "medium",
+                          "large"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "small",
+                          "medium",
+                          "large"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "eyes.spacing": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "close",
+                          "medium",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "close",
+                          "medium",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "eyes.lid": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "single",
+                          "hooded",
+                          "double"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "single",
+                          "hooded",
+                          "double"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "eyes.tilt": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "down",
+                          "level",
+                          "up"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "down",
+                          "level",
+                          "up"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "nose.height": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "low",
+                          "medium",
+                          "high"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "low",
+                          "medium",
+                          "high"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "nose.width": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "narrow",
+                          "medium",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "narrow",
+                          "medium",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "nose.tip": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "round",
+                          "defined",
+                          "broad"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "round",
+                          "defined",
+                          "broad"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "lips.width": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "narrow",
+                          "medium",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "narrow",
+                          "medium",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "lips.ratio": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "lower",
+                          "balanced",
+                          "upper"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "lower",
+                          "balanced",
+                          "upper"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "brows.arc": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "straight",
+                          "soft",
+                          "angled"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "straight",
+                          "soft",
+                          "angled"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "brows.distance": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "close",
+                          "medium",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "enum": [
+                          "close",
+                          "medium",
+                          "wide"
+                        ]
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "skin.tone": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "skin.texture": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "skin.marks": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "makeup.base": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "makeup.brows": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "makeup.shadow": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "makeup.liner": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "makeup.lashes": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "makeup.blush": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "makeup.lip_color": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "makeup.lip_finish": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "makeup.lip_edge": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "styling.hair": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "styling.wardrobe": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "styling.expression": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "styling.pose": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "photo.medium": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "photo.framing": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "photo.view": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "photo.light": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              },
+              "photo.background": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "designed"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "status": {
+                        "enum": [
+                          "observed",
+                          "inferred"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "null"
+                      },
+                      "status": {
+                        "enum": [
+                          "unknown"
+                        ]
+                      },
+                      "evidence": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "status",
+                      "evidence"
+                    ]
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "minProperties": 1
+          },
+          "locks": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "person.age": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "person.presentation": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "face.ratio": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "short",
+                      "balanced",
+                      "long"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "face.midface": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "short",
+                      "balanced",
+                      "long"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "bone.brow": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "flat",
+                      "subtle",
+                      "pronounced"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "bone.orbit": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "shallow",
+                      "medium",
+                      "deep"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "bone.cheek_height": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "bone.cheek_width": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "narrow",
+                      "medium",
+                      "wide"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "bone.cheek_projection": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "flat",
+                      "subtle",
+                      "pronounced"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "bone.midface_projection": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "back",
+                      "neutral",
+                      "forward"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "jaw.width": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "narrow",
+                      "equal",
+                      "wide"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "jaw.angle": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "soft",
+                      "medium",
+                      "angular"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "chin.shape": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "round",
+                      "tapered",
+                      "square"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "chin.length": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "short",
+                      "medium",
+                      "long"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "chin.projection": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "back",
+                      "neutral",
+                      "forward"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "tissue.cheek": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "light",
+                      "medium",
+                      "full"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eyes.length": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "short",
+                      "medium",
+                      "long"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eyes.opening": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "small",
+                      "medium",
+                      "large"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eyes.spacing": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "close",
+                      "medium",
+                      "wide"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eyes.lid": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "single",
+                      "hooded",
+                      "double"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eyes.tilt": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "down",
+                      "level",
+                      "up"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "nose.height": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "nose.width": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "narrow",
+                      "medium",
+                      "wide"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "nose.tip": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "round",
+                      "defined",
+                      "broad"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lips.width": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "narrow",
+                      "medium",
+                      "wide"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lips.ratio": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "lower",
+                      "balanced",
+                      "upper"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "brows.arc": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "straight",
+                      "soft",
+                      "angled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "brows.distance": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "close",
+                      "medium",
+                      "wide"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "skin.tone": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "skin.texture": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "skin.marks": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "makeup.base": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "makeup.brows": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "makeup.shadow": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "makeup.liner": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "makeup.lashes": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "makeup.blush": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "makeup.lip_color": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "makeup.lip_finish": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "makeup.lip_edge": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "styling.hair": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "styling.wardrobe": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "styling.expression": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "styling.pose": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "photo.medium": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "photo.framing": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "photo.view": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "photo.light": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "photo.background": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": []
+          },
+          "assumptions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "intent",
+          "fields",
+          "locks",
+          "assumptions"
+        ]
+      }
+    },
+    "revision": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "base_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "allowed": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "person.age",
+              "person.presentation",
+              "face.ratio",
+              "face.midface",
+              "bone.brow",
+              "bone.orbit",
+              "bone.cheek_height",
+              "bone.cheek_width",
+              "bone.cheek_projection",
+              "bone.midface_projection",
+              "jaw.width",
+              "jaw.angle",
+              "chin.shape",
+              "chin.length",
+              "chin.projection",
+              "tissue.cheek",
+              "eyes.length",
+              "eyes.opening",
+              "eyes.spacing",
+              "eyes.lid",
+              "eyes.tilt",
+              "nose.height",
+              "nose.width",
+              "nose.tip",
+              "lips.width",
+              "lips.ratio",
+              "brows.arc",
+              "brows.distance",
+              "skin.tone",
+              "skin.texture",
+              "skin.marks",
+              "makeup.base",
+              "makeup.brows",
+              "makeup.shadow",
+              "makeup.liner",
+              "makeup.lashes",
+              "makeup.blush",
+              "makeup.lip_color",
+              "makeup.lip_finish",
+              "makeup.lip_edge",
+              "styling.hair",
+              "styling.wardrobe",
+              "styling.expression",
+              "styling.pose",
+              "photo.medium",
+              "photo.framing",
+              "photo.view",
+              "photo.light",
+              "photo.background"
+            ]
+          }
+        },
+        "changes": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "base_sha256",
+        "allowed",
+        "changes"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "request",
+    "policy",
+    "cards"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portrait Forge plan v1",
+  "description": "Shape schema only; runtime validates mode requirements, locks, revisions, and cross-card constraints."
+}

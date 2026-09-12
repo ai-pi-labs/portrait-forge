@@ -1,0 +1,36 @@
+test_all_example_outputs_current (test_runtime.RuntimeTests.test_all_example_outputs_current) ... ok
+test_cli_compile_from_other_directory (test_runtime.RuntimeTests.test_cli_compile_from_other_directory) ... ok
+test_cli_edit_validate_requires_baseline (test_runtime.RuntimeTests.test_cli_edit_validate_requires_baseline) ... ok
+test_cli_error_exit_json (test_runtime.RuntimeTests.test_cli_error_exit_json) ... ok
+test_create_and_every_confirmed_field_compiles (test_runtime.RuntimeTests.test_create_and_every_confirmed_field_compiles) ... ok
+test_duplicate_ids (test_runtime.RuntimeTests.test_duplicate_ids) ... ok
+test_duplicate_keys_and_nonfinite_rejected (test_runtime.RuntimeTests.test_duplicate_keys_and_nonfinite_rejected) ... ok
+test_edit_without_baseline_refused (test_runtime.RuntimeTests.test_edit_without_baseline_refused) ... ok
+test_empty_reference_rejected (test_runtime.RuntimeTests.test_empty_reference_rejected) ... ok
+test_exact_revision_and_original_unchanged (test_runtime.RuntimeTests.test_exact_revision_and_original_unchanged) ... ok
+test_generated_schema_fresh (test_runtime.RuntimeTests.test_generated_schema_fresh) ... ok
+test_image_mode_requires_record_but_compiler_never_generates (test_runtime.RuntimeTests.test_image_mode_requires_record_but_compiler_never_generates) ... ok
+test_install_and_refuse_overwrite (test_runtime.RuntimeTests.test_install_and_refuse_overwrite) ... ok
+test_local_global_conflict (test_runtime.RuntimeTests.test_local_global_conflict) ... ok
+test_locked_unknown_preserved (test_runtime.RuntimeTests.test_locked_unknown_preserved) ... ok
+test_locks_apply_across_every_domain (test_runtime.RuntimeTests.test_locks_apply_across_every_domain) ... ok
+test_log_tampering_detected (test_runtime.RuntimeTests.test_log_tampering_detected) ... ok
+test_malformed_inputs_do_not_crash (test_runtime.RuntimeTests.test_malformed_inputs_do_not_crash) ... ok
+test_missing_required_original (test_runtime.RuntimeTests.test_missing_required_original) ... ok
+test_one_group_cannot_count_as_several (test_runtime.RuntimeTests.test_one_group_cannot_count_as_several) ... ok
+test_reference_invention_rejected (test_runtime.RuntimeTests.test_reference_invention_rejected) ... ok
+test_reference_unknown_and_inference_not_prompted (test_runtime.RuntimeTests.test_reference_unknown_and_inference_not_prompted) ... ok
+test_repeated_faces_fail_even_with_different_styling (test_runtime.RuntimeTests.test_repeated_faces_fail_even_with_different_styling) ... ok
+test_roster_all_ten_pairs (test_runtime.RuntimeTests.test_roster_all_ten_pairs) ... ok
+test_same_makeup_lip_finish_detected (test_runtime.RuntimeTests.test_same_makeup_lip_finish_detected) ... ok
+test_stable_despite_json_key_order (test_runtime.RuntimeTests.test_stable_despite_json_key_order) ... ok
+test_tampered_revision_detected (test_runtime.RuntimeTests.test_tampered_revision_detected) ... ok
+test_unauthorized_path_refused (test_runtime.RuntimeTests.test_unauthorized_path_refused) ... ok
+test_unknown_key_rejected (test_runtime.RuntimeTests.test_unknown_key_rejected) ... ok
+test_work_export_contains_all_reference_rules (test_runtime.RuntimeTests.test_work_export_contains_all_reference_rules) ... ok
+test_wrong_baseline_refused (test_runtime.RuntimeTests.test_wrong_baseline_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.298s
+
+OK

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "source_sha256": "74640d29e7356ecb8dc22d08a8cc96e3f86fd0327521c10f2047e67a2ac3d4ab",
+  "outputs": [
+    {
+      "id": "partial-demo",
+      "prompt": "面部结构｜面部长宽：短宽。\n妆容｜唇色：低饱和酒红。",
+      "trace": [
+        {
+          "field": "face.ratio",
+          "section": "structure",
+          "text": "面部长宽：短宽",
+          "status": "observed"
+        },
+        {
+          "field": "makeup.lip_color",
+          "section": "makeup",
+          "text": "唇色：低饱和酒红",
+          "status": "designed"
+        }
+      ],
+      "omitted": [
+        "bone.orbit"
+      ]
+    }
+  ],
+  "kind": "prompt",
+  "image_generated": false
+}

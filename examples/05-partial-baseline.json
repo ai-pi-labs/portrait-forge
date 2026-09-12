@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "request": {
+    "text": "记录可见结构作为局部改妆基线",
+    "mode": "reference",
+    "deliverable": "text",
+    "image_authorized": false
+  },
+  "policy": {
+    "locks": {},
+    "same_makeup": false,
+    "distinct": false,
+    "min_groups": 3,
+    "min_core": 2
+  },
+  "cards": [
+    {
+      "id": "partial-demo",
+      "intent": "未知骨相保持未知",
+      "fields": {
+        "face.ratio": {
+          "value": "short",
+          "status": "observed",
+          "evidence": "合成测试材料：正面短宽轮廓"
+        },
+        "bone.orbit": {
+          "value": null,
+          "status": "unknown",
+          "evidence": "合成测试材料：强光无法判断"
+        },
+        "makeup.lip_color": {
+          "value": "粉棕",
+          "status": "observed",
+          "evidence": "合成测试材料：唇部可见"
+        }
+      },
+      "locks": {
+        "bone.orbit": null
+      },
+      "assumptions": [
+        "合成数据，不代表真实观察"
+      ]
+    }
+  ]
+}

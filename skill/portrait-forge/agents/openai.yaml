@@ -1,0 +1,6 @@
+interface:
+  display_name: "人像工坊 Portrait Forge"
+  short_description: "把人物需求变成可复用角色档案、完整中文提示词与可核对的局部修改"
+  default_prompt: "使用 $portrait-forge 设计一位圆脸、单眼皮的成年人物，保留圆润感，以表情和妆容表达清冷。"
+policy:
+  allow_implicit_invocation: true

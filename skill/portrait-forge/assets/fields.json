@@ -1,0 +1,459 @@
+{
+  "version": 1,
+  "fields": {
+    "person.age": {
+      "label": "年龄设定",
+      "section": "person",
+      "identity": true,
+      "required_create": true
+    },
+    "person.presentation": {
+      "label": "人物呈现",
+      "section": "person",
+      "identity": true,
+      "required_create": true
+    },
+    "face.ratio": {
+      "label": "面部长宽",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "face",
+      "values": {
+        "short": "短宽",
+        "balanced": "均衡",
+        "long": "偏长窄"
+      }
+    },
+    "face.midface": {
+      "label": "中庭比例",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "face",
+      "values": {
+        "short": "偏短",
+        "balanced": "适中",
+        "long": "偏长"
+      }
+    },
+    "bone.brow": {
+      "label": "眉骨起伏",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "values": {
+        "flat": "平缓",
+        "subtle": "轻微",
+        "pronounced": "明显"
+      }
+    },
+    "bone.orbit": {
+      "label": "眼窝深浅",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "values": {
+        "shallow": "较浅",
+        "medium": "中等",
+        "deep": "较深"
+      }
+    },
+    "bone.cheek_height": {
+      "label": "颧部高度",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "contour",
+      "values": {
+        "low": "偏低",
+        "medium": "中等",
+        "high": "偏高"
+      }
+    },
+    "bone.cheek_width": {
+      "label": "颧部横向宽度",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "contour",
+      "values": {
+        "narrow": "内收",
+        "medium": "适中",
+        "wide": "外扩"
+      }
+    },
+    "bone.cheek_projection": {
+      "label": "颧部向前体量",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "contour",
+      "values": {
+        "flat": "平缓",
+        "subtle": "轻微",
+        "pronounced": "明显"
+      }
+    },
+    "bone.midface_projection": {
+      "label": "鼻基底及上唇相对颧部前后关系",
+      "section": "structure",
+      "identity": true,
+      "required_create": false,
+      "values": {
+        "back": "偏后",
+        "neutral": "平顺",
+        "forward": "偏前"
+      }
+    },
+    "jaw.width": {
+      "label": "下颌相对颧部宽度",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "contour",
+      "values": {
+        "narrow": "较窄",
+        "equal": "接近",
+        "wide": "较宽"
+      }
+    },
+    "jaw.angle": {
+      "label": "下颌转折",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "contour",
+      "values": {
+        "soft": "圆缓",
+        "medium": "可见",
+        "angular": "明显"
+      }
+    },
+    "chin.shape": {
+      "label": "下巴正面形状",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "contour",
+      "values": {
+        "round": "圆钝",
+        "tapered": "收尖",
+        "square": "方"
+      }
+    },
+    "chin.length": {
+      "label": "下巴长度",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "contour",
+      "values": {
+        "short": "短",
+        "medium": "适中",
+        "long": "长"
+      }
+    },
+    "chin.projection": {
+      "label": "下巴前后位置",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "contour",
+      "values": {
+        "back": "略后收",
+        "neutral": "中性",
+        "forward": "略前伸"
+      }
+    },
+    "tissue.cheek": {
+      "label": "面颊软组织",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "values": {
+        "light": "较薄",
+        "medium": "适中",
+        "full": "饱满"
+      }
+    },
+    "eyes.length": {
+      "label": "眼裂长度",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "eyes",
+      "values": {
+        "short": "较短",
+        "medium": "适中",
+        "long": "较长"
+      }
+    },
+    "eyes.opening": {
+      "label": "眼睛开合",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "eyes",
+      "values": {
+        "small": "较小",
+        "medium": "适中",
+        "large": "较大"
+      }
+    },
+    "eyes.spacing": {
+      "label": "眼距",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "eyes",
+      "values": {
+        "close": "较近",
+        "medium": "适中",
+        "wide": "较宽"
+      }
+    },
+    "eyes.lid": {
+      "label": "眼睑",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "eyes",
+      "values": {
+        "single": "单眼皮",
+        "hooded": "内双",
+        "double": "双眼皮"
+      }
+    },
+    "eyes.tilt": {
+      "label": "原生眼尾方向",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "eyes",
+      "values": {
+        "down": "下垂",
+        "level": "平直",
+        "up": "上扬"
+      }
+    },
+    "nose.height": {
+      "label": "鼻梁高度",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "nose",
+      "values": {
+        "low": "较低",
+        "medium": "适中",
+        "high": "较高"
+      }
+    },
+    "nose.width": {
+      "label": "鼻背宽度",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "nose",
+      "values": {
+        "narrow": "较窄",
+        "medium": "适中",
+        "wide": "较宽"
+      }
+    },
+    "nose.tip": {
+      "label": "鼻尖形态",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "nose",
+      "values": {
+        "round": "圆润",
+        "defined": "收束",
+        "broad": "有量感"
+      }
+    },
+    "lips.width": {
+      "label": "嘴部宽度",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "lips",
+      "values": {
+        "narrow": "较窄",
+        "medium": "适中",
+        "wide": "较宽"
+      }
+    },
+    "lips.ratio": {
+      "label": "上下唇比例",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "lips",
+      "values": {
+        "lower": "上薄下厚",
+        "balanced": "接近",
+        "upper": "上厚下薄"
+      }
+    },
+    "brows.arc": {
+      "label": "自然眉弧",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "brows",
+      "values": {
+        "straight": "平直",
+        "soft": "柔弧",
+        "angled": "眉峰明显"
+      }
+    },
+    "brows.distance": {
+      "label": "眉眼距离",
+      "section": "structure",
+      "identity": true,
+      "required_create": true,
+      "group": "brows",
+      "values": {
+        "close": "较近",
+        "medium": "适中",
+        "wide": "较宽"
+      }
+    },
+    "skin.tone": {
+      "label": "基础肤色",
+      "section": "skin",
+      "identity": true,
+      "required_create": true
+    },
+    "skin.texture": {
+      "label": "自然皮肤纹理",
+      "section": "skin",
+      "identity": true,
+      "required_create": false
+    },
+    "skin.marks": {
+      "label": "个人标记",
+      "section": "skin",
+      "identity": true,
+      "required_create": false
+    },
+    "makeup.base": {
+      "label": "底妆",
+      "section": "makeup",
+      "identity": false,
+      "required_create": true
+    },
+    "makeup.brows": {
+      "label": "眉妆",
+      "section": "makeup",
+      "identity": false,
+      "required_create": true
+    },
+    "makeup.shadow": {
+      "label": "眼影",
+      "section": "makeup",
+      "identity": false,
+      "required_create": true
+    },
+    "makeup.liner": {
+      "label": "眼线",
+      "section": "makeup",
+      "identity": false,
+      "required_create": true
+    },
+    "makeup.lashes": {
+      "label": "睫毛",
+      "section": "makeup",
+      "identity": false,
+      "required_create": true
+    },
+    "makeup.blush": {
+      "label": "腮红",
+      "section": "makeup",
+      "identity": false,
+      "required_create": true
+    },
+    "makeup.lip_color": {
+      "label": "唇色",
+      "section": "makeup",
+      "identity": false,
+      "required_create": true
+    },
+    "makeup.lip_finish": {
+      "label": "唇部质地",
+      "section": "makeup",
+      "identity": false,
+      "required_create": true
+    },
+    "makeup.lip_edge": {
+      "label": "唇妆边缘",
+      "section": "makeup",
+      "identity": false,
+      "required_create": true
+    },
+    "styling.hair": {
+      "label": "发型",
+      "section": "styling",
+      "identity": false,
+      "required_create": true
+    },
+    "styling.wardrobe": {
+      "label": "服装",
+      "section": "styling",
+      "identity": false,
+      "required_create": true
+    },
+    "styling.expression": {
+      "label": "表情",
+      "section": "styling",
+      "identity": false,
+      "required_create": true
+    },
+    "styling.pose": {
+      "label": "姿态",
+      "section": "styling",
+      "identity": false,
+      "required_create": true
+    },
+    "photo.medium": {
+      "label": "画面媒介",
+      "section": "photo",
+      "identity": false,
+      "required_create": true
+    },
+    "photo.framing": {
+      "label": "构图与留白",
+      "section": "photo",
+      "identity": false,
+      "required_create": true
+    },
+    "photo.view": {
+      "label": "视角",
+      "section": "photo",
+      "identity": false,
+      "required_create": true
+    },
+    "photo.light": {
+      "label": "光线",
+      "section": "photo",
+      "identity": false,
+      "required_create": true
+    },
+    "photo.background": {
+      "label": "背景",
+      "section": "photo",
+      "identity": false,
+      "required_create": true
+    }
+  },
+  "sections": {
+    "person": "人物",
+    "structure": "面部结构",
+    "skin": "皮肤",
+    "makeup": "妆容",
+    "styling": "造型与表演",
+    "photo": "摄影表现"
+  }
+}
