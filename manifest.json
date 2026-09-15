@@ -21,13 +21,13 @@
     },
     {
       "path": "README.en.md",
-      "bytes": 8070,
-      "sha256": "9d774a53b50d5e3fbe0c5822b22bbc4f2db6317a472f95308a6e0063bd1484dc"
+      "bytes": 8062,
+      "sha256": "d6e7a088d0bfcb279846eca1747bddfe6c443b2eeb6707128f9a96cf04e6dba0"
     },
     {
       "path": "README.md",
-      "bytes": 7062,
-      "sha256": "810e4c129d25755ae19d6f018a3d21393a20012946b770cacad0c9c80e9fc854"
+      "bytes": 7040,
+      "sha256": "6891f7abcf88aa9194406186e76dab6b37e247b406d6db5d2ad18917e5ed94a0"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -61,8 +61,8 @@
     },
     {
       "path": "docs/assets/aipi-banner.svg",
-      "bytes": 1087,
-      "sha256": "acc96d8567b423eb343ed32be2a575380dbb7b4a7638eae0b814950161887cd2"
+      "bytes": 1031,
+      "sha256": "1bfcdef051e0d4d8d2078f40b5e9982f02b2f1ae20fe944d764e4d8990121aed"
     },
     {
       "path": "docs/release-checks.json",

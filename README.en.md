@@ -1,6 +1,6 @@
 <p align="center"><img src="docs/assets/aipi-banner.svg" alt="AIπ · AI圆周派 · AI-PI-LABS" width="100%"></p>
 
-<h1 align="center">AIπ · Portrait Forge</h1>
+<h1 align="center">Portrait Forge</h1>
 
 <p align="center">Turn character requirements into reusable plans and complete Chinese prompts. Change only the requested fields, with a recorded baseline and explicit differences.<br><em>人像工坊：角色档案、受控修改与完整中文提示词。</em></p>
 
@@ -9,17 +9,6 @@
 <p align="center"><a href="README.md">简体中文</a> · <strong>English</strong></p>
 
 <p align="center"><a href="#install">Install</a> · <a href="#examples">Existing examples</a> · <a href="#usage">Use</a> · <a href="#scope">Validation and sources</a></p>
-
-## What you can receive
-
-| Task | Deliverable |
-| --- | --- |
-| Original character | A short direction and a complete Chinese prompt; a JSON plan when reuse is requested |
-| Fixed character, new makeup, or a local edit | A complete revised prompt, recorded field changes, and baseline checks |
-| Different faces with shared makeup, or an ensemble | A complete prompt per person, pairwise structural comparisons, and makeup checks |
-| Reference analysis within a specified scope | Visible facts, inferences, and unknowns kept separate; only the requested scope recorded |
-
-The host agent handles natural-language design. Python tools perform deterministic validation, revision, and compilation. No image model or API key is bundled. Image generation requires an explicit request and an available host tool. This skill is not intended for reverse-engineering product posters or producing complete video storyboards.
 
 <a id="examples"></a>
 
@@ -33,6 +22,17 @@ These are existing text designs and runnable plans, not generated-image results.
 | Change only lip color to muted burgundy | [Complete revised prompt](examples/compiled/02-edited.md) | [Revised plan](examples/02-edited.json) · [Patch](examples/lip-patch.json) |
 | Five distinct faces with the same makeup | [Five complete prompts](examples/compiled/03-roster.md) | [Ensemble plan](examples/03-roster.json) |
 | Reference observations and an incomplete baseline | [Example directory](examples/) | [Reference plan](examples/04-reference.json) · [Incomplete baseline](examples/05-partial-baseline.json) |
+
+## What you can receive
+
+| Task | Deliverable |
+| --- | --- |
+| Original character | A short direction and a complete Chinese prompt; a JSON plan when reuse is requested |
+| Fixed character, new makeup, or a local edit | A complete revised prompt, recorded field changes, and baseline checks |
+| Different faces with shared makeup, or an ensemble | A complete prompt per person, pairwise structural comparisons, and makeup checks |
+| Reference analysis within a specified scope | Visible facts, inferences, and unknowns kept separate; only the requested scope recorded |
+
+The host agent handles natural-language design. Python tools perform deterministic validation, revision, and compilation. No image model or API key is bundled. Image generation requires an explicit request and an available host tool. This skill is not intended for reverse-engineering product posters or producing complete video storyboards.
 
 <a id="install"></a>
 

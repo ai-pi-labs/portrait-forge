@@ -1,6 +1,6 @@
 <p align="center"><img src="docs/assets/aipi-banner.svg" alt="AIπ · AI圆周派 · AI-PI-LABS" width="100%"></p>
 
-<h1 align="center">AIπ｜AI圆周派 · 人像工坊</h1>
+<h1 align="center">人像工坊</h1>
 
 <p align="center">把人物需求整理成可复用的角色档案与完整中文提示词。局部修改只动指定字段，保留基线与前后差异。<br><em>Portrait Forge — reusable character plans, controlled edits, and complete Chinese prompts.</em></p>
 
@@ -9,17 +9,6 @@
 <p align="center"><strong>简体中文</strong> · <a href="README.en.md">English</a></p>
 
 <p align="center"><a href="#install">安装</a> · <a href="#examples">已有案例</a> · <a href="#usage">使用</a> · <a href="#scope">验证与来源</a></p>
-
-## 能交付什么
-
-| 任务 | 交付 |
-| --- | --- |
-| 原创角色 | 一句方向、完整中文 Prompt；需要复用时保存 JSON 档案 |
-| 固定人物换妆、局部修改 | 完整新稿、字段变更记录与基线核对 |
-| 同妆不同脸、角色阵容 | 每人完整提示词、所有配对的结构差异与同妆检查 |
-| 限定范围参考图分析 | 区分可见信息、推测与未知；只记录用户指定范围 |
-
-自然语言设计由宿主 Agent 完成，Python 工具负责确定性校验、修改和编译。本项目不附带图像模型或 API key；明确委托生图时，使用宿主实际可用的图片工具。它不用于产品海报反推或完整视频分镜。
 
 <a id="examples"></a>
 
@@ -33,6 +22,17 @@
 | 只改唇色为低饱和酒红 | [完整修改稿](examples/compiled/02-edited.md) | [修改档案](examples/02-edited.json) · [局部补丁](examples/lip-patch.json) |
 | 五人同妆、不同面部结构 | [五份完整 Prompt](examples/compiled/03-roster.md) | [阵容档案](examples/03-roster.json) |
 | 参考分析与未知基线 | [示例目录](examples/) | [观察档案](examples/04-reference.json) · [未知基线](examples/05-partial-baseline.json) |
+
+## 能交付什么
+
+| 任务 | 交付 |
+| --- | --- |
+| 原创角色 | 一句方向、完整中文 Prompt；需要复用时保存 JSON 档案 |
+| 固定人物换妆、局部修改 | 完整新稿、字段变更记录与基线核对 |
+| 同妆不同脸、角色阵容 | 每人完整提示词、所有配对的结构差异与同妆检查 |
+| 限定范围参考图分析 | 区分可见信息、推测与未知；只记录用户指定范围 |
+
+自然语言设计由宿主 Agent 完成，Python 工具负责确定性校验、修改和编译。本项目不附带图像模型或 API key；明确委托生图时，使用宿主实际可用的图片工具。它不用于产品海报反推或完整视频分镜。
 
 <a id="install"></a>
 
