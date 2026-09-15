@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-15",
+  "method": "Direct visual inspection of both complete generated images; no face-recognition score or pixel-identity claim.",
+  "tool": "built-in image_gen",
+  "calls": 2,
+  "baseline": {
+    "input": "baseline-prompt.txt",
+    "character": "Original fictional adult character lin-01; age 38 is a design setting, not inferred from the photo.",
+    "result": "GENERATED_AND_VIEWED"
+  },
+  "edit": {
+    "input": "edit-prompt.txt",
+    "reference_image": "baseline.png",
+    "requested_change": "makeup.lip_color: 低饱和粉棕 -> 低饱和酒红",
+    "result": "PARTIAL"
+  },
+  "observations": [
+    {
+      "check": "Single adult subject, complete head and hair ends, front-facing portrait",
+      "result": "VISIBLE_MATCH"
+    },
+    {
+      "check": "Lip color becomes darker, muted burgundy",
+      "result": "VISIBLE_MATCH"
+    },
+    {
+      "check": "Overall face, hair, pose, gray-green shirt, framing and gray background",
+      "result": "VISUALLY_SIMILAR",
+      "limit": "This is not a biometric or exact-identity verification."
+    },
+    {
+      "check": "Strict preservation outside the lips",
+      "result": "FAIL",
+      "detail": "Forehead and cheek skin microtexture, flyaway hair and fabric texture are visibly regenerated. Do not claim all non-lip pixels or all other appearance details are unchanged."
+    },
+    {
+      "check": "Exact age, latent 3D facial structure and identity across future runs",
+      "result": "NOT_VERIFIABLE_FROM_THIS_PAIR"
+    }
+  ],
+  "scope": {
+    "generated_people": 1,
+    "image_edit_attempts": 1,
+    "repair_attempts": 0,
+    "behavior_suite_24_scenarios": "NOT_RUN",
+    "real_human_reference": "NONE",
+    "postprocessing": "NONE"
+  },
+  "images": [
+    {
+      "file": "baseline.png",
+      "bytes": 2176261,
+      "width": 1086,
+      "height": 1448,
+      "sha256": "da72d74e3f82a31eaa4ea41948e5582fdddf608a032ce9f2cec481d0da14e7f9",
+      "unaltered_tool_output": true
+    },
+    {
+      "file": "edited.png",
+      "bytes": 1969867,
+      "width": 1086,
+      "height": 1448,
+      "sha256": "145a5437aaece9d7c259a62c10f731ca70ec15715e10aeab79353199b4719b0b",
+      "unaltered_tool_output": true
+    }
+  ]
+}

@@ -21,13 +21,13 @@
     },
     {
       "path": "README.en.md",
-      "bytes": 8062,
-      "sha256": "d6e7a088d0bfcb279846eca1747bddfe6c443b2eeb6707128f9a96cf04e6dba0"
+      "bytes": 9322,
+      "sha256": "9383357a9b37e76c023ef5b6c4567c239f2dbe3091248ca13e43fa59521cec3a"
     },
     {
       "path": "README.md",
-      "bytes": 7040,
-      "sha256": "6891f7abcf88aa9194406186e76dab6b37e247b406d6db5d2ad18917e5ed94a0"
+      "bytes": 8078,
+      "sha256": "b2f7da3195e15bf0a6b1bc09aae2ee37e9f5d8b8bf886acd9655121b16049185"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -56,8 +56,8 @@
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 1833,
-      "sha256": "150069a6d5b57d5ae8e6ab336a63dd36b57f80813199a57b8f07d2ff281b2cec"
+      "bytes": 2205,
+      "sha256": "49540d9ec0613b56f7f865268c6e7272df16bdb3611439acbb0f1ac7eb834f5c"
     },
     {
       "path": "docs/assets/aipi-banner.svg",
@@ -173,6 +173,81 @@
       "path": "examples/lip-patch.json",
       "bytes": 121,
       "sha256": "e4dc7232f402c95d018aa3f6110bc1d920902eba55e8329230fc8b12903daed6"
+    },
+    {
+      "path": "examples/verified-20260915/REPORT.md",
+      "bytes": 4645,
+      "sha256": "f4aa4427fe84abe29444fd99967e96f2c37c14a7dc37ead59663d10ae370f079"
+    },
+    {
+      "path": "examples/verified-20260915/baseline-compiled.json",
+      "bytes": 10581,
+      "sha256": "1dcb5faff2d858bcbf2685f9dface4572f616e6fcea63850d8f967aeb19fbb44"
+    },
+    {
+      "path": "examples/verified-20260915/baseline-plan.json",
+      "bytes": 7884,
+      "sha256": "00c37f2fec055870eaaac8ea5a783498fca06d89e6fc3175740ab7f8d0a1ecb2"
+    },
+    {
+      "path": "examples/verified-20260915/baseline-prompt.txt",
+      "bytes": 2482,
+      "sha256": "e83476047ad1d2a90df1f1c1df8e4d85ea54cb025dfdeb319f8e69ecd49db7db"
+    },
+    {
+      "path": "examples/verified-20260915/baseline.png",
+      "bytes": 2176261,
+      "sha256": "da72d74e3f82a31eaa4ea41948e5582fdddf608a032ce9f2cec481d0da14e7f9"
+    },
+    {
+      "path": "examples/verified-20260915/comparison.json",
+      "bytes": 329,
+      "sha256": "7139b1b8abd2f49da13ce2f0300418970df30abb4efc70e787d48b2ab6da69db"
+    },
+    {
+      "path": "examples/verified-20260915/edit-prompt.txt",
+      "bytes": 2866,
+      "sha256": "8deb2ebad4eefadba9727f2890b8140841c92cd52951e8b40dbe8b5aaa39788b"
+    },
+    {
+      "path": "examples/verified-20260915/edited-compiled.json",
+      "bytes": 10581,
+      "sha256": "4774907edd34f1c3004a6f5d0441aeddb1d7746c6bc0e498146aa5c460886366"
+    },
+    {
+      "path": "examples/verified-20260915/edited-plan.json",
+      "bytes": 8326,
+      "sha256": "8ff88645ebc535c27783dbd4deae2a054bfdae921c6a74d7c93056605279d9cd"
+    },
+    {
+      "path": "examples/verified-20260915/edited.png",
+      "bytes": 1969867,
+      "sha256": "145a5437aaece9d7c259a62c10f731ca70ec15715e10aeab79353199b4719b0b"
+    },
+    {
+      "path": "examples/verified-20260915/lip-patch.json",
+      "bytes": 121,
+      "sha256": "e4dc7232f402c95d018aa3f6110bc1d920902eba55e8329230fc8b12903daed6"
+    },
+    {
+      "path": "examples/verified-20260915/program-results.json",
+      "bytes": 7215,
+      "sha256": "abdb4ec614cb1360e073b8b4cfd8e3c432aba93a616de542f02febc0071dc189"
+    },
+    {
+      "path": "examples/verified-20260915/reproduce.sh",
+      "bytes": 2312,
+      "sha256": "bdea956d0ef7c74677a5207b384687290a0244e8d5375616c3303a2e96d84628"
+    },
+    {
+      "path": "examples/verified-20260915/unittest.txt",
+      "bytes": 3388,
+      "sha256": "e9ea549d996312d3d5dcb9f789d71fd5259cc7f348e1c7fd9aa4e7a1e4470623"
+    },
+    {
+      "path": "examples/verified-20260915/visual-review.json",
+      "bytes": 2202,
+      "sha256": "f80ce39848011cda2aae7ddc8648d6a31a9916bdce88b92c25e6c09a4ecd03cc"
     },
     {
       "path": "skill/portrait-forge/LICENSE",

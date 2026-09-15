@@ -12,9 +12,22 @@
 
 <a id="examples"></a>
 
-## 先看已有案例
+## 先看实测：只改唇色
 
-以下是仓库已有的文字设计与可运行档案，未实际生成图片，不代表图片身份或美观效果已经验证。
+2026-09-15，以已有原创成年角色 `lin-01` 完成两次实际调用：先生成基线肖像，再引用这张图改唇色。下方为两张未经后期处理的工具原始输出。
+
+| 基线：低饱和粉棕 | 引用基线：低饱和酒红 |
+| --- | --- |
+| ![原创成年角色基线肖像](examples/verified-20260915/baseline.png) | ![引用基线改唇色的实际输出](examples/verified-20260915/edited.png) |
+
+**唇色变化达成，严格局部保持未通过。** 主要外观与构图接近，但皮肤、碎发和衣料纹理出现再生成，不能称为完全同脸或其他区域不变。31 项程序测试通过；图像结果只覆盖这一组样本。
+
+[完整测试报告与复现步骤](examples/verified-20260915/REPORT.md) · [基线生图 Prompt](examples/verified-20260915/baseline-prompt.txt) · [引用编辑 Prompt](examples/verified-20260915/edit-prompt.txt)
+
+<details>
+<summary>继续看已有文字设计与可运行档案</summary>
+
+以下原有案例保留完整提示词和档案；五人阵容与参考分析尚未验证真实图像效果。
 
 | 案例 | 可读结果 | 结构档案 |
 | --- | --- | --- |
@@ -22,6 +35,8 @@
 | 只改唇色为低饱和酒红 | [完整修改稿](examples/compiled/02-edited.md) | [修改档案](examples/02-edited.json) · [局部补丁](examples/lip-patch.json) |
 | 五人同妆、不同面部结构 | [五份完整 Prompt](examples/compiled/03-roster.md) | [阵容档案](examples/03-roster.json) |
 | 参考分析与未知基线 | [示例目录](examples/) | [观察档案](examples/04-reference.json) · [未知基线](examples/05-partial-baseline.json) |
+
+</details>
 
 ## 能交付什么
 
@@ -38,7 +53,7 @@
 
 ## 快速安装
 
-使用有仓库访问权限的 GitHub 账号克隆源码，进入仓库根目录：
+仓库现已公开，可直接克隆源码，进入仓库根目录：
 
 ```sh
 git clone https://github.com/ai-pi-labs/portrait-forge.git
@@ -107,7 +122,7 @@ python3 skill/portrait-forge/scripts/portrait.py compile ../portrait-edited.json
 
 ## 验证与来源
 
-既有验证记录报告 31 项程序回归通过、独立目录安装与 ZIP 解压检查通过。24 条自然语言场景是待执行评估材料，不是模型通过率；尚未验证真实生图与图片身份效果，也未在线安装到 ChatGPT Work。本次首页整理不重新声明这些测试已经执行。详见[验证记录](docs/VALIDATION.md)与[行为评估](evals/README.md)。
+2026-09-15 已重新运行全部 31 项程序测试，并完成隔离安装和一组实际原创肖像／引用唇色编辑；图像编辑有已披露的纹理漂移，未证明严格身份或局部像素保持。24 条自然语言场景仍是待执行评估材料，不是模型通过率；ChatGPT Work 在线安装仍未验证。详见[本次实测报告](examples/verified-20260915/REPORT.md)、[历史验证记录](docs/VALIDATION.md)与[行为评估](evals/README.md)。
 
 项目独立编写，设计上参考 [nuyoah-ai-works/nuyoah-portrait-character-designer](https://github.com/nuyoah-ai-works/nuyoah-portrait-character-designer) 的锁定、脸妆分层、参考可见性和阵容核查思想；没有捆绑原参考照片或作者生图案例，也不声称自动生图效果优于原版。原仓库审查见 [UPSTREAM_REVIEW.md](docs/UPSTREAM_REVIEW.md)。
 

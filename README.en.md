@@ -12,9 +12,22 @@
 
 <a id="examples"></a>
 
-## Existing examples
+## Tested example: change only the lip color
 
-These are existing text designs and runnable plans, not generated-image results. They do not demonstrate visual identity or image quality.
+On 2026-09-15, two actual calls created a baseline portrait of the existing fictional adult character `lin-01`, then edited the lip color using that actual image as the reference. These are the unmodified tool outputs.
+
+| Baseline: muted pink-brown | Referenced edit: muted burgundy |
+| --- | --- |
+| ![Original adult character baseline portrait](examples/verified-20260915/baseline.png) | ![Actual lip-color edit using the baseline image](examples/verified-20260915/edited.png) |
+
+**The lip-color change worked; strict local preservation failed.** The overall appearance and composition remain similar, but skin, flyaway hair and fabric texture were regenerated. This is not exact identity or unchanged regions outside the lips. All 31 program tests passed; the image findings cover this one pair only.
+
+[Test report and reproduction steps](examples/verified-20260915/REPORT.md#english-summary) · [Actual generation prompt](examples/verified-20260915/baseline-prompt.txt) · [Actual reference-edit prompt](examples/verified-20260915/edit-prompt.txt)
+
+<details>
+<summary>More existing text designs and runnable plans</summary>
+
+The existing prompts and plans remain available below. The ensemble and reference-analysis cases have not been verified with real image outputs.
 
 | Example | Readable result | Structured plan |
 | --- | --- | --- |
@@ -22,6 +35,8 @@ These are existing text designs and runnable plans, not generated-image results.
 | Change only lip color to muted burgundy | [Complete revised prompt](examples/compiled/02-edited.md) | [Revised plan](examples/02-edited.json) · [Patch](examples/lip-patch.json) |
 | Five distinct faces with the same makeup | [Five complete prompts](examples/compiled/03-roster.md) | [Ensemble plan](examples/03-roster.json) |
 | Reference observations and an incomplete baseline | [Example directory](examples/) | [Reference plan](examples/04-reference.json) · [Incomplete baseline](examples/05-partial-baseline.json) |
+
+</details>
 
 ## What you can receive
 
@@ -38,7 +53,7 @@ The host agent handles natural-language design. Python tools perform determinist
 
 ## Install
 
-Clone with a GitHub account that has access to the repository, then run from the repository root:
+The repository is public. Clone the source directly, then run from the repository root:
 
 ```sh
 git clone https://github.com/ai-pi-labs/portrait-forge.git
@@ -108,7 +123,7 @@ One field catalog drives validation, Chinese prompt compilation, and the derived
 
 ## Validation and sources
 
-Existing records report 31 passing program regressions, isolated installation checks, and ZIP extraction checks. The 24 natural-language scenarios are evaluation materials, not a model pass rate. Real image generation, visual identity, and online ChatGPT Work installation remain untested. This homepage update does not claim those earlier tests were rerun. See [validation records](docs/VALIDATION.md) and [behavior evaluation](evals/README.md).
+On 2026-09-15, all 31 program tests were rerun, with isolated installation and one actual portrait/reference-edit pair. The edit has disclosed texture drift and does not prove strict identity or local pixel preservation. The 24 natural-language scenarios remain unrun evaluation materials, not a model pass rate. Online ChatGPT Work installation remains untested. See the [current test report](examples/verified-20260915/REPORT.md#english-summary), [historical validation records](docs/VALIDATION.md), and [behavior evaluation](evals/README.md).
 
 This is an independent implementation informed by [nuyoah-ai-works/nuyoah-portrait-character-designer](https://github.com/nuyoah-ai-works/nuyoah-portrait-character-designer), including locking, separation of face and makeup, reference visibility, and ensemble checks. It does not bundle the original reference photos or the author's generated-image examples, or claim better automatic image results. See the [upstream review](docs/UPSTREAM_REVIEW.md).
 

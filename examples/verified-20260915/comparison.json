@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "changes": {
+    "makeup.lip_color": {
+      "before": {
+        "value": "低饱和粉棕",
+        "status": "designed",
+        "evidence": "创作设定"
+      },
+      "after": {
+        "value": "低饱和酒红",
+        "status": "designed",
+        "evidence": "创作设定"
+      }
+    }
+  }
+}

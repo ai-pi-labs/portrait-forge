@@ -1,0 +1,270 @@
+{
+  "environment": {
+    "python": "3.14.2",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "records": [
+    {
+      "name": "unittest",
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.419
+    },
+    {
+      "name": "validate-baseline",
+      "args": [
+        "skill/portrait-forge/scripts/portrait.py",
+        "validate",
+        "examples/verified-20260915/baseline-plan.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.058
+    },
+    {
+      "name": "compile-baseline",
+      "args": [
+        "skill/portrait-forge/scripts/portrait.py",
+        "compile",
+        "examples/verified-20260915/baseline-plan.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.064
+    },
+    {
+      "name": "revise-lip",
+      "args": [
+        "skill/portrait-forge/scripts/portrait.py",
+        "revise",
+        "examples/verified-20260915/baseline-plan.json",
+        "examples/verified-20260915/lip-patch.json",
+        "--allow",
+        "makeup.lip_color",
+        "--request",
+        "只改唇色为低饱和酒红，所有其他已登记字段保持不变。"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "name": "validate-edited",
+      "args": [
+        "skill/portrait-forge/scripts/portrait.py",
+        "validate",
+        "examples/verified-20260915/edited-plan.json",
+        "--baseline",
+        "examples/verified-20260915/baseline-plan.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "name": "compile-edited",
+      "args": [
+        "skill/portrait-forge/scripts/portrait.py",
+        "compile",
+        "examples/verified-20260915/edited-plan.json",
+        "--baseline",
+        "examples/verified-20260915/baseline-plan.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.055
+    },
+    {
+      "name": "compare-lip",
+      "args": [
+        "skill/portrait-forge/scripts/portrait.py",
+        "compare",
+        "examples/verified-20260915/baseline-plan.json",
+        "examples/verified-20260915/edited-plan.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.061
+    },
+    {
+      "name": "reject-missing-baseline",
+      "args": [
+        "skill/portrait-forge/scripts/portrait.py",
+        "compile",
+        "examples/verified-20260915/edited-plan.json"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "seconds": 0.058
+    },
+    {
+      "name": "validate-roster",
+      "args": [
+        "skill/portrait-forge/scripts/portrait.py",
+        "validate",
+        "examples/03-roster.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.064
+    },
+    {
+      "name": "compile-roster",
+      "args": [
+        "skill/portrait-forge/scripts/portrait.py",
+        "compile",
+        "examples/03-roster.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.071
+    },
+    {
+      "name": "compile-reference",
+      "args": [
+        "skill/portrait-forge/scripts/portrait.py",
+        "compile",
+        "examples/04-reference.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.074
+    },
+    {
+      "name": "compile-unknown",
+      "args": [
+        "skill/portrait-forge/scripts/portrait.py",
+        "compile",
+        "examples/06-partial-edited.json",
+        "--baseline",
+        "examples/05-partial-baseline.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.082
+    },
+    {
+      "name": "install",
+      "args": [
+        "tools/install.py",
+        "--dest",
+        "$TEST_ROOT/installed-skills"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.076
+    },
+    {
+      "name": "reject-install-overwrite",
+      "args": [
+        "tools/install.py",
+        "--dest",
+        "$TEST_ROOT/installed-skills"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "seconds": 0.073
+    },
+    {
+      "name": "installed-compile",
+      "args": [
+        "$TEST_ROOT/installed-skills/portrait-forge/scripts/portrait.py",
+        "compile",
+        "$REPO/examples/verified-20260915/baseline-plan.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.093
+    }
+  ],
+  "installed_files_match": 18,
+  "installed_files": [
+    {
+      "path": "LICENSE",
+      "sha256": "2d5f3604170b0a32f81ed718e3c8288210954c5b4bc2410c13ecccb5b88b61c2"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "a9ad538f54f36805ec3b1f46aeb2182add2f60a5f67ecedaceb952c9ca4a7fb5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "6a8558815c1e12ba8fcd02eac769c104e0f14bb7ce570fd7628f242196787a5a"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "93ae75fce0d720c40bed216efaffdaaa14cf9bca32c190d3e8c27f2c31658b46"
+    },
+    {
+      "path": "assets/fields.json",
+      "sha256": "db007f300a818abe15defa66935651613d424677ae695ee6b8b5a5cebf73be6b"
+    },
+    {
+      "path": "assets/plan.schema.json",
+      "sha256": "86bf653654edfb08c7c75d371e2784a12e3dcf2960881e217d3253e6087c88b0"
+    },
+    {
+      "path": "references/compile.md",
+      "sha256": "ee4d180aeaffad104562d9770ae03f13feb33d44a49f86b0fedafc98a552632f"
+    },
+    {
+      "path": "references/continuity.md",
+      "sha256": "61e351f8331af6ea2b2bc23d5bc8a447bb07a0097b8fbe7bca8d558baa43d5e3"
+    },
+    {
+      "path": "references/contract.md",
+      "sha256": "25cdd2f9ebfbf693c37045c9e444f402cf6bdf8c2e483ccba989dc62f92b337d"
+    },
+    {
+      "path": "references/design.md",
+      "sha256": "5f6a902f6090dd04a39b68910867d90f43fca0d16c20e400382ffe9a55011c90"
+    },
+    {
+      "path": "references/face.md",
+      "sha256": "f297812f1768c543a44841d215478f9fa9c51a637f7683453ba4e2aedfe63c56"
+    },
+    {
+      "path": "references/look.md",
+      "sha256": "3f59027444e60ac37326678fdbd427a91cfa94294206b6ccb407a4fa19dc340b"
+    },
+    {
+      "path": "references/reference.md",
+      "sha256": "dcaa170ea8872ad42a243c166abfe3a941c6b8fa204534749c6a997076bbd678"
+    },
+    {
+      "path": "scripts/portrait.py",
+      "sha256": "c99e4c3d555e0ab8377d5aadfb3778bc50a285c2e1197e4cc82b561e3c6157be"
+    },
+    {
+      "path": "scripts/portraitcore/__init__.py",
+      "sha256": "0563418a3c27daa694ecb001d402e8ce3b311182c4d6acea3e360600f5aa0db8"
+    },
+    {
+      "path": "scripts/portraitcore/compiler.py",
+      "sha256": "bec3d2cc3850a948ceabe061e6960334eb7e7c44fa35431c7800bfa2fc363455"
+    },
+    {
+      "path": "scripts/portraitcore/contracts.py",
+      "sha256": "f320dc462289e922316e35a5c958c1dd2b6a271fa6ac6c4109d081815a679984"
+    },
+    {
+      "path": "scripts/portraitcore/revisions.py",
+      "sha256": "78b67d0235fdc5984ba666d7414cc3a520ac72d38331d188b8c6e6ad570f190a"
+    }
+  ],
+  "date": "2026-09-15",
+  "unit_tests": {
+    "passed": 31,
+    "failed": 0,
+    "log": "unittest.txt"
+  },
+  "image_generation_included_in_program_checks": false
+}

@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "request": {
+    "text": "只改唇色为低饱和酒红，所有其他已登记字段保持不变。",
+    "mode": "edit",
+    "deliverable": "text",
+    "image_authorized": false
+  },
+  "policy": {
+    "locks": {},
+    "same_makeup": false,
+    "distinct": false,
+    "min_groups": 3,
+    "min_core": 2
+  },
+  "cards": [
+    {
+      "id": "lin-01",
+      "intent": "圆润而克制，以表情和低饱和妆保持清冷感",
+      "fields": {
+        "person.age": {
+          "value": "38岁成年人",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "person.presentation": {
+          "value": "女性人物，安静而有精神的日常肖像",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "skin.tone": {
+          "value": "中等明度暖橄榄肤色",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "skin.texture": {
+          "value": "保留轻微皮肤纹理，局部自然反光",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "makeup.base": {
+          "value": "薄透半哑光底妆，保持基础肤色",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "makeup.brows": {
+          "value": "灰棕色顺毛流填补，眉头柔边",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "makeup.shadow": {
+          "value": "低饱和桃粉薄铺于睁眼可见上眼睑",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "makeup.liner": {
+          "value": "深棕细线贴睫毛根部，眼尾短而平",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "makeup.lashes": {
+          "value": "自然轻卷，不额外强调外侧",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "makeup.blush": {
+          "value": "桃粉色在双颊中央横向柔边晕开",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "makeup.lip_color": {
+          "value": "低饱和酒红",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "makeup.lip_finish": {
+          "value": "缎光",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "makeup.lip_edge": {
+          "value": "沿天然唇缘，柔和清楚",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "styling.hair": {
+          "value": "黑色齐肩短发，侧分露出眉眼",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "styling.wardrobe": {
+          "value": "无图案灰绿色圆领上衣",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "styling.expression": {
+          "value": "眉间放松，闭唇轻笑，目光看向镜头",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "styling.pose": {
+          "value": "肩膀自然放松，头部保持端正",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "photo.medium": {
+          "value": "写实人像摄影",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "photo.framing": {
+          "value": "3:4竖幅胸像，头顶和发梢完整，四周留白",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "photo.view": {
+          "value": "平视正面",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "photo.light": {
+          "value": "正前侧大面积柔光，保留鼻侧柔和阴影",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "photo.background": {
+          "value": "浅暖灰背景，无额外道具",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "face.ratio": {
+          "value": "short",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "face.midface": {
+          "value": "balanced",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "bone.brow": {
+          "value": "flat",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "bone.orbit": {
+          "value": "shallow",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "bone.cheek_height": {
+          "value": "medium",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "bone.cheek_width": {
+          "value": "medium",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "bone.cheek_projection": {
+          "value": "subtle",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "bone.midface_projection": {
+          "value": "neutral",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "jaw.width": {
+          "value": "equal",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "jaw.angle": {
+          "value": "medium",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "chin.shape": {
+          "value": "round",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "chin.length": {
+          "value": "medium",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "chin.projection": {
+          "value": "neutral",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "tissue.cheek": {
+          "value": "full",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "eyes.length": {
+          "value": "medium",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "eyes.opening": {
+          "value": "medium",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "eyes.spacing": {
+          "value": "medium",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "eyes.lid": {
+          "value": "single",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "eyes.tilt": {
+          "value": "level",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "nose.height": {
+          "value": "medium",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "nose.width": {
+          "value": "wide",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "nose.tip": {
+          "value": "defined",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "lips.width": {
+          "value": "medium",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "lips.ratio": {
+          "value": "balanced",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "brows.arc": {
+          "value": "soft",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "brows.distance": {
+          "value": "medium",
+          "status": "designed",
+          "evidence": "创作设定"
+        }
+      },
+      "locks": {
+        "face.ratio": "short",
+        "eyes.lid": "single",
+        "nose.width": "wide"
+      },
+      "assumptions": [
+        "年龄与服装为本示例主动选择，不由脸型推断"
+      ]
+    }
+  ],
+  "revision": {
+    "base_sha256": "f261a8a78a6a513b60d206f973b1b9946017455aab20fa830cb73a28488a72e5",
+    "allowed": [
+      "makeup.lip_color"
+    ],
+    "changes": {
+      "makeup.lip_color": {
+        "before": {
+          "value": "低饱和粉棕",
+          "status": "designed",
+          "evidence": "创作设定"
+        },
+        "after": {
+          "value": "低饱和酒红",
+          "status": "designed",
+          "evidence": "创作设定"
+        }
+      }
+    }
+  }
+}
