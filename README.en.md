@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/assets/aipi-banner.svg" alt="AIπ · AI圆周派 · Portrait Forge" width="100%"></p>
+<p align="center"><img src="docs/assets/aipi-banner.svg" alt="AIπ · AI圆周派 · AI-PI-LABS" width="100%"></p>
 
 <h1 align="center">AIπ · Portrait Forge</h1>
 
